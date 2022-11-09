@@ -12,23 +12,17 @@
     padding: 0;
 }
 
- @media (min-width: 375px) {
+ @media (max-width: 400px) {
     main { 
-        width: 500px;
+        width: 350px;
     }
 } 
 
-@media only screen and (min-width: 1025px) {
-    .mobile-only {
-        display: none;
+@media (min-width: 551px) {
+    main { 
+        width: 550px;
     }
-}
-
-@media only screen and (max-width: 1025px) {
-    .desktop-only {
-        display: none;
-    }
-}
+} 
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -44,45 +38,34 @@ body {
 main {
     margin-left: 15px;
     margin-right: 15px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 @media (min-width:588px) {
    main {
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(275px, 1fr));
+    max-width: 700px;
+    margin: 0;
     }
 }
 
-main .mobile-only, 
-main .desktop-only {
-    max-width: 100%;
-}
-
-main .mobile-only {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-main .desktop-only {
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+main picture img {
+    display: inherit;
 }
 
 main section {
     background-color: var(--White);
     margin-top: -4px;
     padding: 20px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+ 
 }
 
 @media (min-width:588px) {
     main section {
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: unset;
-        margin-top: 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: column;
     }
 }
@@ -92,11 +75,10 @@ main section .perfume {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 0.7500em;
-    
 }
 
 main section h1 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-top: 7px;
     color: var(--Very-dark-blue);
     font-family: 'Fraunces', serif;
@@ -113,7 +95,6 @@ main section p:last-of-type .price {
     color: var(--Dark-cyan);
     font-weight: 700;
     font-size: 2em;
-    
 }
 
 main section p:last-of-type del {
@@ -128,22 +109,20 @@ main section button {
     margin-top: 7px;
     background-color: var(--Dark-cyan);
     width: 100%;
-    outline: none;
+    border: none;
     padding: 7px 0;
     text-align: center;
     border-radius: 10px;
-    border-color: var(--Dark-cyan);
 }
 
 main section button:hover {
     outline: none;
     background-color: var(--Very-dark-blue);
-    border-color: var(--Very-dark-blue);
     cursor: pointer;
 }
 
 main section button img {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 footer {
